@@ -25,11 +25,11 @@ function plot_v(Vol,receiver_name,time,dateStr)
         maxValue = minValue + Vol_delta;
         ylnew = [minValue  maxValue];
         set(v_gca(i), 'Ylim', ylnew);
-        set(v_gca(i),'ytick',minValue:Vol_delta/5:maxValue);  
+        set(v_gca(i),'ytick',minValue:Vol_delta/5:maxValue);
         ax = v_gca(i);
         %ax.XTick = datenum(xtick_data);
-        set(gca,'xtick',datenum(xtick_data));
-        datetick(ax,'x','HH:MM','keepticks');    
+        set(ax,'xtick',datenum(xtick_data));
+        datetick(ax,'x','HH:MM','keepticks');
     end       
     suptitle([receiver_name,...
         '波段接收机各通道的电压曲线（测量日期：',dateStr,'）']);
