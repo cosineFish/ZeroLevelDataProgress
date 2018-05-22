@@ -1,7 +1,5 @@
 function [status , msginfo] = ...
-    write2xls(filePath , title , cnames , values , length)
-%write2xls(filePath , title , cnames , values , sheetName , length)
-    global dateStr;
+    write2xls(filePath , title , cnames , values , length ,dateStr)
     global sheetNum;
     sheetName = [dateStr,'_',num2str(sheetNum)];
     global positionRowNum;
